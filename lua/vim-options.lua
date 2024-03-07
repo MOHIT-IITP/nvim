@@ -45,3 +45,21 @@ vim.api.nvim_set_keymap(
 )
 -- Python compile and run the file
 vim.api.nvim_set_keymap('n', '<leader>q', [[:w<CR>:! printf "Mohitttt your output is \n*****************************\n" && python3 %:r.py<CR>]], { noremap = true, silent = true })
+
+
+
+
+
+-- left and right navigation 
+-- Normal Mode Navigation
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
+
+-- Terminal Navigation
+vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true })
+
