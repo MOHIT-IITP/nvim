@@ -63,3 +63,19 @@ vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true })
 
+
+
+-- vertical split
+-- keybinds
+function VerticalSplit()
+    vim.cmd('vsplit')
+end
+vim.api.nvim_set_keymap('n', '<leader>|', '<cmd>lua VerticalSplit()<CR>', { noremap = true, silent = true })
+
+--horizontal split
+--keybinds
+function HorizontalSplit()
+    vim.cmd('split')
+end
+vim.api.nvim_set_keymap('n', '<leader>-', '<cmd>lua HorizontalSplit()<CR>', { noremap = true, silent = true })
+
