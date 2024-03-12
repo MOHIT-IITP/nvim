@@ -45,3 +45,22 @@ vim.api.nvim_set_keymap(
 )
 -- Python compile and run the file
 vim.api.nvim_set_keymap('n', '<leader>q', [[:w<CR>:! printf "Mohitttt your output is \n*****************************\n" && python3 %:r.py<CR>]], { noremap = true, silent = true })
+
+
+
+
+
+-- vertical split
+-- keybinds
+function VerticalSplit()
+    vim.cmd('vsplit')
+end
+vim.api.nvim_set_keymap('n', '<leader>|', '<cmd>lua VerticalSplit()<CR>', { noremap = true, silent = true })
+
+--horizontal split
+--keybinds
+function HorizontalSplit()
+    vim.cmd('split')
+end
+vim.api.nvim_set_keymap('n', '<leader>-', '<cmd>lua HorizontalSplit()<CR>', { noremap = true, silent = true })
+
