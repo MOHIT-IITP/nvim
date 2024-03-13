@@ -16,6 +16,20 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- navigate left and right with vim mode 
+-- Normal Mode Navigation 
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+
+-- Terminal Navigation
+vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true, silent = true })
+
+
 
 
 -- Copy entire buffer contents to system clipboard
@@ -25,7 +39,7 @@ vim.api.nvim_set_keymap("n", "<Leader>c", 'ggVG"+y', { noremap = true })
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>r",
-  ':w<CR>:! printf "Mohiittt your output is\n----------------------\n" && g++ -std=c++1z -o test %:r.cpp && ./test && printf "---------------------\n"<CR>',
+  ':w<CR>:! printf "Mohiittt your output is\n----------------------\n" && g++ -std=c++17 -o test %:r.cpp && ./test && printf "---------------------\n"<CR>',
   { noremap = true }
 )
 
@@ -33,14 +47,14 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>f",
-  ':w<CR>:! printf "Mohiiiitttttt your output from file is\\n---------------\\n" &&  g++ -std=c++1z -o test %:r.cpp && ./test < input.txt && printf "----------\\n"<CR>',
+  ':w<CR>:! printf "Mohiiiitttttt your output from file is\\n---------------\\n" &&  g++ -std=c++17 -o test %:r.cpp && ./test < input.txt && printf "----------\\n"<CR>',
   { noremap = true }
 )
 -- Compile and run C++ code with timing
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>t",
-  ':w<CR>:! printf "Mohitttt your time of execution file is\n*************\n" &&  g++ -std=c++1z -o test %:r.cpp && time ./test < input.txt && printf "*************\n"<CR>',
+  ':w<CR>:! printf "Mohitttt your time of execution file is\n*************\n" &&  g++ -std=c++17 -o test %:r.cpp && time ./test < input.txt && printf "*************\n"<CR>',
   { noremap = true }
 )
 -- Python compile and run the file
