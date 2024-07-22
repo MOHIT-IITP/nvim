@@ -6,7 +6,13 @@
     <li>Catppuccin</li>
     <li>telescope</li>
     <li>lualine</li>
-    <li>cp c++ config</li>
-    <li>python config</li>
-    <li>java config</li>
+    <li>auto_close.nvim</li>
+    <li>lsp config </li>
+    <li>completion using lsp</li>
+    <li>NULL ls</li>
+    <li>oil</li>
+    <li>git stuff</li>
+    <li>git signs</li>
+    <li>swagger preview</li>
+    <li> alpha nvim</li>
 </ul>
