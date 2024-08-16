@@ -11,8 +11,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<Leader>Y", [["+Y]])
 vim.keymap.set("n", "<Leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.cmd.colorscheme "gruvbox"
-vim.o.background = "light"
+vim.cmd.colorscheme "catppuccin"
 vim.opt.updatetime = 50
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
