@@ -59,7 +59,7 @@ vim.api.nvim_set_keymap(
 -- Compile and run C++ code with timing
 vim.api.nvim_set_keymap(
   "n",
-  "<Leader>t",
+  "<Leader>p",
   ':w<CR>:! printf "24kgold_n your time of execution file is\n*************\n" &&  g++ -std=c++17 -o test %:r.cpp && time ./test < input.txt && printf "*************\n"<CR>',
   { noremap = true }
 )

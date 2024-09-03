@@ -54,7 +54,7 @@ return {
         'arzg/vim-colors-xcode',
         config = function()
             vim.opt.termguicolors = true -- Enable true color support
-            vim.cmd('colorscheme xcodedark') -- Use 'xcodelight' for the light theme
+            vim.cmd('colorscheme xcodelight') -- Use 'xcodelight' for the light theme
         end
     },
 }
