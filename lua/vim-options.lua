@@ -1,14 +1,24 @@
--- done to add the dot in the leading space
-vim.opt.list = true
+local lspconfig = require("lspconfig")
 
-vim.opt.listchars = {
-	tab = "»·",
-	trail = "·",
-	precedes = "←",
-	extends = "→",
-	space = "·",
-	lead = "·",
-}
+-- Function to set up key mappings for LSP
+local function on_attach(client, bufnr)
+	local opts = { noremap = true, silent = true }
+	-- Key mappings for LSP
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	-- Add more key mappings as needed
+end
+
+-- Setup TypeScript Language Server
+lspconfig.ts_ls.setup({
+	on_attach = on_attach,
+	capabilities = {
+		-- Specify capabilities if needed
+	},
+	settings = {
+		-- Additional settings for ts_ls can be added here
+	},
+})
 
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
