@@ -1,23 +1,16 @@
-local lspconfig = require("lspconfig")
+-- indent blankline 
+vim.opt.list = false 
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append("trail: ")
 
--- Function to set up key mappings for LSP
-local function on_attach(client, bufnr)
-	local opts = { noremap = true, silent = true }
-	-- Key mappings for LSP
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	-- Add more key mappings as needed
-end
-
--- Setup TypeScript Language Server
-lspconfig.ts_ls.setup({
-	on_attach = on_attach,
-	capabilities = {
-		-- Specify capabilities if needed
-	},
-	settings = {
-		-- Additional settings for ts_ls can be added here
-	},
+-- lsp config 
+require("lspconfig").ts_ls.setup({
+	on_attach = function(client, bufnr)
+		local opts = { noremap = true, silent = true }
+		vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- Go to definition
+		vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts) -- References
+		vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- Hover
+	end,
 })
 
 vim.cmd("set expandtab")
