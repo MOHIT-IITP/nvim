@@ -29,7 +29,10 @@ return {
 			ensure_installed = {
 				"ts_ls",
 				"html",
+				"bashls",
+				"jdtls",
 				"cssls",
+				"eslint",
 				"tailwindcss",
 				"svelte",
 				"lua_ls",
