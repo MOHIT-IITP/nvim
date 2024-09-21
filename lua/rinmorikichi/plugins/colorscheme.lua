@@ -29,7 +29,7 @@ return {
 				DiagnosticVirtualTextWarn = { fg = "#dfaf87" },
 				-- fold
 				Folded = { fg = "#fe8019", bg = "#0E1018", italic = true },
-				SignColumn = { bg = "#fe8019" },
+				SignColumn = { bg = "#0E1018" },
 				-- new git colors
 				DiffAdd = {
 					bold = true,
