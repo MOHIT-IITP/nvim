@@ -1,1 +1,0 @@
-require("rinmorikichi.core.options")
