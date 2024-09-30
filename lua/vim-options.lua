@@ -1,5 +1,7 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+vim.api.nvim_set_keymap('n', '<leader>yy', 'ggVGy', { noremap = true, silent = true })
+
 local opt = vim.opt
 
 opt.relativenumber = true
