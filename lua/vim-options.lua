@@ -85,21 +85,21 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
---  Compile and run C++ code with input from file
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>r",
-	':w<CR>:! printf "24kgold_nnn your output from file is\\n---------------\\n" &&  g++ -std=c++17 -o test %:r.cpp && ./test < input.txt && printf "----------\\n"<CR>',
-	{ noremap = true, silent = true }
-)
-
--- Compile and run C++ code with timing
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>p",
-	':w<CR>:! printf "24kgold_n your time of execution file is\n*************\n" &&  g++ -std=c++17 -o test %:r.cpp && time ./test < input.txt && printf "*************\n"<CR>',
-	{ noremap = true }
-)
+-- --  Compile and run C++ code with input from file
+-- vim.api.nvim_set_keymap(
+-- 	"n",
+-- 	"<Leader>r",
+-- 	':w<CR>:! printf "24kgold_nnn your output from file is\\n---------------\\n" &&  g++ -std=c++17 -o test %:r.cpp && ./test < input.txt && printf "----------\\n"<CR>',
+-- 	{ noremap = true, silent = true }
+-- )
+--
+-- -- Compile and run C++ code with timing
+-- vim.api.nvim_set_keymap(
+-- 	"n",
+-- 	"<Leader>p",
+-- 	':w<CR>:! printf "24kgold_n your time of execution file is\n*************\n" &&  g++ -std=c++17 -o test %:r.cpp && time ./test < input.txt && printf "*************\n"<CR>',
+-- 	{ noremap = true }
+-- )
 -- Python compile and run the file
 vim.api.nvim_set_keymap(
 	"n",

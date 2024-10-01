@@ -1,9 +1,7 @@
 return {
 	'xeluxee/competitest.nvim',
 	dependencies = 'MunifTanjim/nui.nvim',
-	config = function() require('competitest').setup(
-        {
-
+	config = function() require('competitest').setup({
             local_config_file_name = ".competitest.lua",
             floating_border = "rounded",
             floating_border_highlight = "FloatBorder",
@@ -129,6 +127,9 @@ return {
             open_received_problems = true,
             open_received_contests = true,
             replace_received_testcases = false,
-        }
-    ) end,
+        })
+        vim.api.nvim_set_keymap('n', '<leader>p', ":CompetiTest receive problem<CR>", {})
+        vim.api.nvim_set_keymap('n', '<leader>o', ":CompetiTest receive testcases<CR>", {})
+        vim.api.nvim_set_keymap('n', '<leader>hh', ":CompetiTest run<CR>", {})
+    end,
 }
