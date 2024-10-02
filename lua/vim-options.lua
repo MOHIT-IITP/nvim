@@ -80,7 +80,7 @@ vim.api.nvim_set_keymap("n", "<Leader>y", 'ggVG"+y', { noremap = true })
 --Compile and run C++ code
 vim.api.nvim_set_keymap(
 	"n",
-	"<Leader>f",
+	"<Leader>r",
 	':w<CR>:! printf "Mohiittt your output is\n----------------------\n" && g++ -std=c++17 -o test %:r.cpp && ./test && printf "---------------------\n"<CR>',
 	{ noremap = true, silent = true }
 )
