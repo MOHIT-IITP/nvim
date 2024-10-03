@@ -226,3 +226,10 @@ end
 -- Options for terminal split style and resizing
 vim.g.split_term_style = "horizontal" -- Choose between 'vertical' and 'horizontal'
 vim.g.split_term_resize_cmd = "resize 15" -- Command to resize the terminal window
+
+ 
+--- adding the cpp template 
+
+
+
+
