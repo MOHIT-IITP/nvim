@@ -6,12 +6,14 @@ local t = ls.text_node
 ls.add_snippets("cpp", {
     s("cpp_template", {
         t({
+            "// MOHIT-IITP template",
             "#include <bits/stdc++.h>",
             "using namespace std",
-            "// MOHIT-IITP template",
+            "#define ll long long",
+            "#define pb push_back",
+            "#define MOD 1000000007",
             "",
             "int main() {",
-            "    std::cout << \"Hello, World!\" << std::endl;",
             "    return 0;",
             "}"
         }),
