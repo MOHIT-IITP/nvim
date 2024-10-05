@@ -1,5 +1,12 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+-- Side scroll left to decrease vertical split width
+vim.api.nvim_set_keymap('n', '<ScrollWheelLeft>', ':vertical resize -2<CR>', { noremap = true, silent = true })
+
+-- Side scroll right to increase vertical split width
+vim.api.nvim_set_keymap('n', '<ScrollWheelRight>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+
+
 vim.api.nvim_set_keymap('n', '<leader>yy', 'ggVGy', { noremap = true, silent = true })
 
 local opt = vim.opt
