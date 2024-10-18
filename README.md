@@ -1,6 +1,6 @@
 <h1>This Neovim is Created with ❤️ by MOHIT-IITP</h1>
 <h4>List of Plugins Used </h4>
-<ul>
+<ol>
   <li>AutoPairs nvim</li>
   <li>bufferline nvim</li>
   <li>colorscheme (custom gruvbox theme)</li>
@@ -22,4 +22,4 @@
   <li>vim maximiser</li>
   <li>which key</li>
   <li>alpha nvim</li>
-</ul>
+</ol>
