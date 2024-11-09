@@ -81,6 +81,20 @@ vim.api.nvim_set_keymap("t", "<C-j>", "<C-\\><C-n><C-w>j", { noremap = true, sil
 vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
 
+-- for macos 
+-- Normal Mode Navigation with Tab
+vim.api.nvim_set_keymap("n", "<Tab>h", "<C-w>h", { noremap = true, silent = true }) -- Tab + H to move left
+vim.api.nvim_set_keymap("n", "<Tab>j", "<C-w>j", { noremap = true, silent = true }) -- Tab + J to move down
+vim.api.nvim_set_keymap("n", "<Tab>k", "<C-w>k", { noremap = true, silent = true }) -- Tab + K to move up
+vim.api.nvim_set_keymap("n", "<Tab>l", "<C-w>l", { noremap = true, silent = true }) -- Tab + L to move right
+
+-- Terminal Mode Navigation with Tab
+vim.api.nvim_set_keymap("t", "<Tab>h", "<C-\\><C-n><C-w>h", { noremap = true, silent = true }) -- Tab + H to move left
+vim.api.nvim_set_keymap("t", "<Tab>j", "<C-\\><C-n><C-w>j", { noremap = true, silent = true }) -- Tab + J to move down
+vim.api.nvim_set_keymap("t", "<Tab>k", "<C-\\><C-n><C-w>k", { noremap = true, silent = true }) -- Tab + K to move up
+vim.api.nvim_set_keymap("t", "<Tab>l", "<C-\\><C-n><C-w>l", { noremap = true, silent = true }) -- Tab + L to move right
+
+
 -- Copy entire buffer contents to system clipboard
 vim.api.nvim_set_keymap("n", "<Leader>y", 'ggVG"+y', { noremap = true })
 
