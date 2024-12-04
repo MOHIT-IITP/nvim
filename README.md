@@ -22,4 +22,5 @@
   <li>vim maximiser</li>
   <li>which key</li>
   <li>alpha nvim</li>
+  <li>'VonHeikemen/fine-cmdline.nvim</li>
 </ol>
