@@ -1,4 +1,6 @@
 <h1>This Neovim is Created with ❤️ by MOHIT-IITP</h1>
+<h3>Things to install first:</h3>
+<li>unzip</li>
 <h4>List of Plugins Used </h4>
 <ol>
   <li>AutoPairs nvim</li>
@@ -23,4 +25,5 @@
   <li>which key</li>
   <li>alpha nvim</li>
   <li>'VonHeikemen/fine-cmdline.nvim</li>
+  
 </ol>
