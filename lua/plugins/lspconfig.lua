@@ -141,5 +141,19 @@ return {
 				})
 			end,
 		})
+		vim.diagnostic.config({
+			virtual_text = false, -- Disable virtual text in the gutter
+			float = {
+				show_header = false, -- Hide the header in the floating window
+				border = "none", -- Remove the border around the floating window (optional)
+			},
+		})
+
+		-- Solution 3: Show only errors, hide warnings and info
+		vim.diagnostic.config({
+			severity = {
+				min = vim.diagnostic.severity.ERROR, -- Only show errors, hide warnings and info
+			},
+		})
 	end,
 }
