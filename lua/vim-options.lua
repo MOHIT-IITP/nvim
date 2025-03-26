@@ -1,13 +1,12 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
 -- Side scroll left to decrease vertical split width
-vim.api.nvim_set_keymap('n', '<ScrollWheelLeft>', ':vertical resize -2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<ScrollWheelLeft>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
 -- Side scroll right to increase vertical split width
-vim.api.nvim_set_keymap('n', '<ScrollWheelRight>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<ScrollWheelRight>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 
-
-vim.api.nvim_set_keymap('n', '<leader>yy', 'ggVGy', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>yy", "ggVGy", { noremap = true, silent = true })
 
 local opt = vim.opt
 
@@ -65,6 +64,8 @@ vim.keymap.set("n", "<Leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.opt.updatetime = 50
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<D-d>", "<C-d>zz")
+vim.keymap.set("n", "<D-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -75,13 +76,25 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
+-- for macos
+vim.api.nvim_set_keymap("n", "<D-h>", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<D-j>", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<D-k>", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<D-l>", "<C-w>l", { noremap = true, silent = true })
+
 -- Terminal Navigation
 vim.api.nvim_set_keymap("t", "<C-h>", "<C-\\><C-n><C-w>h", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-j>", "<C-\\><C-n><C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
 
--- for macos 
+-- for macos
+vim.api.nvim_set_keymap("t", "<D-h>", "<C-\\><C-n><C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<D-j>", "<C-\\><C-n><C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<D-k>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<D-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
+
+-- for macos
 -- Normal Mode Navigation with Tab
 vim.api.nvim_set_keymap("n", "<Tab>h", "<C-w>h", { noremap = true, silent = true }) -- Tab + H to move left
 vim.api.nvim_set_keymap("n", "<Tab>j", "<C-w>j", { noremap = true, silent = true }) -- Tab + J to move down
@@ -93,7 +106,6 @@ vim.api.nvim_set_keymap("t", "<Tab>h", "<C-\\><C-n><C-w>h", { noremap = true, si
 vim.api.nvim_set_keymap("t", "<Tab>j", "<C-\\><C-n><C-w>j", { noremap = true, silent = true }) -- Tab + J to move down
 vim.api.nvim_set_keymap("t", "<Tab>k", "<C-\\><C-n><C-w>k", { noremap = true, silent = true }) -- Tab + K to move up
 vim.api.nvim_set_keymap("t", "<Tab>l", "<C-\\><C-n><C-w>l", { noremap = true, silent = true }) -- Tab + L to move right
-
 
 -- Copy entire buffer contents to system clipboard
 vim.api.nvim_set_keymap("n", "<Leader>y", 'ggVG"+y', { noremap = true })
@@ -248,9 +260,4 @@ end
 vim.g.split_term_style = "horizontal" -- Choose between 'vertical' and 'horizontal'
 vim.g.split_term_resize_cmd = "resize 15" -- Command to resize the terminal window
 
- 
---- adding the cpp template 
-
-
-
-
+--- adding the cpp template
