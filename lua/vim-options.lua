@@ -1,5 +1,8 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
+-- changing the cursor to the block
+vim.opt.guicursor = "a:block"
+
 -- Side scroll left to decrease vertical split width
 vim.api.nvim_set_keymap("n", "<ScrollWheelLeft>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
