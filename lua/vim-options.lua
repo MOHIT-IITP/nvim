@@ -13,6 +13,12 @@ vim.api.nvim_set_keymap("n", "<leader>yy", "ggVGy", { noremap = true, silent = t
 
 local opt = vim.opt
 
+-- new line warping and folding config
+vim.o.linebreak = true
+vim.keymap.set('n', '<leader>ww', ':set wrap!<CR>');
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 opt.relativenumber = true
 opt.number = true
 opt.scrolloff = 8

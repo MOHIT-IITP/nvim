@@ -3,7 +3,7 @@ local s = ls.snippet
 local t = ls.text_node
 
 -- Define the HTML snippet template
-ls.add_snippets({"html", "ejs"}, {
+ls.add_snippets({"html", "ejs", "php"}, {
     s("html_template", {
         t({
             "<!DOCTYPE html>",
