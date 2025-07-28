@@ -125,10 +125,42 @@ vim.api.nvim_set_keymap("n", "<Leader>y", 'ggVG"+y', { noremap = true })
 --Compile and run C++ code
 vim.api.nvim_set_keymap(
 	"n",
-	"<Leader>r",
+	"<Leader>rr",
 	':w<CR>:! printf "Mohiittt your output is\n----------------------\n" && g++ -std=c++17 -o test %:r.cpp && ./test && printf "---------------------\n"<CR>',
 	{ noremap = true, silent = true }
 )
+
+
+
+-- input.txt => fill input  
+vim.api.nvim_set_keymap("n", "<Leader>s", "<cmd>lua CompileAndRunCpp()<CR>", { noremap = true, silent = true })
+
+-- Function to compile and run C++ file with input redirection
+function CompileAndRunCpp()
+  -- Get full path without extension
+  local filepath = vim.fn.expand("%:p:r")
+  local cpp_file = filepath .. ".cpp"
+  local output_file = filepath .. ".out"
+  local input_file = vim.fn.expand("%:p:h") .. "/input.txt"
+
+  -- Compile the C++ file
+  local compile_cmd = string.format("g++ -std=c++17 -o '%s' '%s'", output_file, cpp_file)
+  vim.fn.system(compile_cmd)
+
+  if vim.v.shell_error ~= 0 then
+    print("❌ Compilation failed!")
+    return
+  end
+
+  print("✅ Compilation succeeded!")
+
+  -- Escape spaces and run the output file with input redirection
+  local run_cmd = string.format("split | terminal bash -c '%s < %s; exec bash'", output_file, input_file)
+  vim.cmd(run_cmd)
+end
+
+
+
 
 -- --  Compile and run C++ code with input from file
 -- vim.api.nvim_set_keymap(
