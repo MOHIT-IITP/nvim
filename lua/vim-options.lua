@@ -19,7 +19,7 @@ vim.keymap.set('n', '<leader>ww', ':set wrap!<CR>');
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.keymap.set('n', '<leader>fc', '<cmd>normal! zM<CR>', { desc = 'Close all folds' })
-vim.keymap.set('n', '<leader>fo', '<cmd>normal! zR<CR>', { desc = 'Open all folds' })
+vim.keymap.set('n', '<leader>lo', '<cmd>normal! zR<CR>', { desc = 'Open all folds' })
 vim.keymap.set('n', '<leader>nt', '<cmd>normal! za<CR>', { desc = 'Open all folds' })
 
 opt.relativenumber = true
